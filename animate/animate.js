@@ -48,28 +48,4 @@ function animate() {
   });
 }
 
-// used jquery instead
-function fadeIn(elemId) {
-  var elem = document.getElementById(elemId);
-  var opacity = parseFloat(elem.style.opacity) || 0;
-  if (opacity < 1) {
-    opacity += .05;
-    setTimeout(function() {
-      fadeIn(elemId)
-    }, 20);
-  }
-  elem.style.opacity = opacity;
-}
 
-// used jquery instead
-function fadeOut(elemId) {
-  var elem = document.getElementById(elemId);
-  var opacity = parseFloat(elem.style.opacity) || 0;
-  if (opacity > 0) {
-    opacity -= .05;
-    setTimeout(function() {
-      fadeOut(elemId)
-    }, 20);
-  }
-  elem.style.opacity = opacity;
-}
